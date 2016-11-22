@@ -31,15 +31,16 @@ class TalkingClock{
             }
         };
             /*
-            * ActionListener listener = new ActionListener(){};
-            * public void actionPerformed(ActionEvent event) {
-            *     Date now = new Date();
-            *     System.out.println("At the moment, the time is " + now);
-            *     if(beep){
-            *         Toolkit.getDefaultToolkit().beep();
+            * ActionListener listener = new ActionListener(){
+            *     public void actionPerformed(ActionEvent event) {
+            *         Date now = new Date();
+            *         System.out.println("At the moment, the time is " + now);
+            *         if(beep){
+            *             Toolkit.getDefaultToolkit().beep();
+            *         }
             *     }
-            * }
-             */
+            * };
+            */
 
 
         Timer t = new Timer(interval, listener);
