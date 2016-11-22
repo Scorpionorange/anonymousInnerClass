@@ -23,6 +23,7 @@ public class AnonymousInnerClassTest {
  */
 class TalkingClock{
     public void start(int interval, final boolean beep){
+        // Lambda mode
         ActionListener listener = event -> {
             Date now = new Date();
             System.out.println("At the moment, the time is " + now);
@@ -31,6 +32,7 @@ class TalkingClock{
             }
         };
             /*
+            * not Lambda mode
             * ActionListener listener = new ActionListener(){
             *     public void actionPerformed(ActionEvent event) {
             *         Date now = new Date();
