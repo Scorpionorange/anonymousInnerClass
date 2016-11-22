@@ -1,8 +1,8 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Date;
+
 /**
  * Created by ScorpionOrange on 2016/08/09.
  * update again in 2016.11.23.
@@ -23,15 +23,25 @@ public class AnonymousInnerClassTest {
  */
 class TalkingClock{
     public void start(int interval, final boolean beep){
-        ActionListener listener = new ActionListener() {
-            public void actionPerformed(ActionEvent event) {
-                Date now = new Date();
-                System.out.println("At the moment, the time is " + now);
-                if(beep){
-                    Toolkit.getDefaultToolkit().beep();
-                }
+        ActionListener listener = event -> {
+            Date now = new Date();
+            System.out.println("At the moment, the time is " + now);
+            if(beep){
+                Toolkit.getDefaultToolkit().beep();
             }
         };
+            /*
+            * ActionListener listener = new ActionListener(){};
+            * public void actionPerformed(ActionEvent event) {
+            *     Date now = new Date();
+            *     System.out.println("At the moment, the time is " + now);
+            *     if(beep){
+            *         Toolkit.getDefaultToolkit().beep();
+            *     }
+            * }
+             */
+
+
         Timer t = new Timer(interval, listener);
         t.start();
     }
