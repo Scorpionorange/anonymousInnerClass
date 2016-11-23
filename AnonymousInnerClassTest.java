@@ -32,7 +32,7 @@ class TalkingClock{
             }
         };
             /*
-            * not Lambda, general mode
+            * not Lambda, using Version before Java 8, general mode
             * ActionListener listener = new ActionListener(){
             *     public void actionPerformed(ActionEvent event) {
             *         Date now = new Date();
